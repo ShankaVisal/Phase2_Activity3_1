@@ -1,4 +1,4 @@
-@model WebApplication3.Models.VMLogin;
+﻿@model WebApplication3.Models.VMLogin;
 @{
     Layout = null;
 }
@@ -67,22 +67,16 @@
     </style>
 </head>
 <body>
-    <form asp-controller="Access" asp-action="Login" method="post">
+    <form>
         <h1>Login</h1>
-        <input type="email" placeholder="Email" asp-for="Email" />
-        <input type="password" placeholder="Password" asp-for="Password" />
+        <input type="email" placeholder="Email"/>
+        <input type="password" placeholder="Password"/>
         <label>
-            <input type="checkbox" asp-for="KeepLoggedIn" />
+            <input type="checkbox" />
             Keep me logged in
         </label>
         <button type="submit">Login</button>
     </form>
 
-    @if (ViewData["ValidateMessage"] != null)
-    {
-        <div class="message">
-            @ViewData["ValidateMessage"]
-        </div>
-    }
 </body>
 </html>
